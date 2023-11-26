@@ -1,0 +1,102 @@
+.outer{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: 130vh;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60vw;
+  height: 30vh;
+ 
+}
+
+#list-num{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: rgb(239, 243, 248);
+    border-style: solid;
+    width: 70vw;
+    height: 75vh;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 1vw;
+    border-color:  rgb(115, 113, 113); 
+}
+
+#list-num li {
+    float: left;
+    background-color: rgb(239, 243, 248);
+    font-size: .5em;
+    font-style: normal;
+  }
+  
+#teaching{
+    border:lightgray;
+    width: 27vw;
+    height: 30vh;
+    padding:12px;
+    text-align: center;
+    font-size: 1.2em;
+    border-style: solid;  
+}
+
+#teaching-img img{
+    width: 25vw;
+    height: 29vh;
+}
+
+div.scroll-cont{
+    background-color: rgb(204, 196, 196);
+    border: rgb(115, 113, 113); 
+    width: 16vw;
+    height: 50vh;
+    padding: 7px;
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0.3em 0.5em 0.2em lightblue;
+
+}
+
+.scroll-cont img{
+    width: 87%;
+    height: 83%; 
+}
+
+.scroll-cont h6{
+    background-color: rgb(239 243 248 / 0%) !important;
+    color: white;
+}
+
+h1{
+    color:#006C7F;
+}
+
+.select{
+display:none;
+}
+
+.scroll-cont h5, .scroll-cont h6 {
+    background-color: rgb(239 243 248 / 0%);
+    color: white; /* You can adjust the text color as needed */
+}
+
+#sortContainer {
+      display: flex;
+      align-self:flex-start;
+      margin-left:16%;
+      width:80%;
+    }
+    
+    #sortLabel {
+      margin-right: 1%;
+    }
