@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jumbling-Course evaluation
+		</title>
+		<link rel="styleSheet" href="primaryCode.css">
+		<link rel="styleSheet" href="eval.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	</head>
+
+	<body>
+
+		<header>
+
+			<div class="container">
+
+				<nav>
+					<ul id="navigation">
+						<li>
+							<a href="Administrator.html" accesskey="a">Administrator dashboard
+							</a>
+						</li>
+						<li>
+							<a href="Parent.html" accesskey="p">Parent's dashboard</a>
+						</li>
+						<li>
+							<a href="courses.html" accesskey="c">Current courses
+							</a>
+						</li>
+						<li>
+							<a href="Tutors.html" accesskey="t">Tutors</a>
+						</li>
+						<li>
+							<a href="Home.html" accesskey="h">Home</a>
+						</li>
+						<li style="padding-right: 19%;"><img class="logo" src="images/logo.jpg" alt="logo of Jumbling website" width="130" height="100">
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+
+		<main>
+
+
+			<form id="forma" name="myForm">
+				<div class="courseBox">
+					<label for="Course">Course:</label>
+					<select name="Course" id="Course">
+						<option value="Select Course">Select Course</option>
+						<option value="Java">Java</option>
+						<option value="Python">Python</option>
+						<option value="C++">C++</option>
+						<option value="R">R</option>
+						<option value="HTML">HTML</option>
+						<option value="CSS">CSS</option>
+					</select>
+				</div>
+
+
+				<div class="stars">
+					<div class="star-widget">
+						<input type="radio" name="rate" id="rate-5" value="5">
+						<label for="rate-5" class="fas fa-star"></label>
+						<input type="radio" name="rate" id="rate-4" value="4">
+						<label for="rate-4" class="fas fa-star"></label>
+						<input type="radio" name="rate" id="rate-3" value="3">
+						<label for="rate-3" class="fas fa-star"></label>
+						<input type="radio" name="rate" id="rate-2" value="2">
+						<label for="rate-2" class="fas fa-star"></label>
+						<input type="radio" name="rate" id="rate-1" value="1">
+						<label for="rate-1" class="fas fa-star"></label>
+					</div>
+				</div>
+				<div class="review">
+					<textarea cols="30" placeholder="review here.."></textarea>
+				</div>
+
+				<div>
+					<input type="file" name="add-photo" id="photo">
+					<label for="photo" class="photoButton">Add photo</label> 
+				</div>
+
+				<div class="btn">
+					<button type="submit" class="buttonstyle">Submit</button>
+				</div>
+
+
+			</form>
+
+
+		</main>
+		
+		<!--form validation js-->
+		<script>
+			let form = document.getElementById('forma');
+
+if (form){
+form.addEventListener('submit', function (event) {
+  
+    
+    if (form.Course.value == 'Select Course') {
+        alert('Please select a course');
+        event.preventDefault();
+    }
+   
+    else if (!form.rate.value) {
+        alert('Please select a rating score');
+        event.preventDefault();
+    }
+   
+    else {
+        alert('Thank you for your feedback! , Your rating for course ' + form.Course.value + ' is ' + form.rate.value);
+    }
+});
+}
+
+		</script>
+
+
+
+		<footer>
+
+			<h3 class="contactRec">Contact us</h3>
+			<ul class="contactRec">
+				<li class="contactRec">+966522981060
+					<hr></li>
+				<li class="contactRec">+0114820061<hr></li>
+				<li class="contactRec">Jumbling@academy.com<hr></li>
+			</ul>
+			<ul class="socialMedia">
+				<li class="socialMedia"><img class="socialMedia" src="images/facebook.png" alt="facebook icon" height="20vh" width="20vh"></li>
+				<li class="socialMedia"><img class="socialMedia" src="images/instagram.png" alt="instgram icon" height="20vh" width="20vh"></li>
+				<li class="socialMedia"><img class="socialMedia" src="images/x.png" alt="X icon" height="20vh" width="20vh"></li>
+			</ul>
+			<p class="rights">
+				®2023 Jumbling academy.All rights</p>
+
+			<h3 class="address">Address</h3>
+			<ul class="address">
+				<li class="address">Saudi Arabia, Riyadh<hr></li>
+				<li class="address">Saudi Arabia, Jeddah<hr></li>
+				<li class="address">Saudi Arabia, Dammam<hr></li>
+			</ul>
+
+		</footer>
+		
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+/*tables for schedules*/
+
+
+table, th, td {
+  border: 0.2vh solid grey;
+  border-style: dotted;
+  font-family: Arial;
+  text-align: center;
+}
+
+th, td{
+width:40vw;
+}
+
+thead th{
+    background-color: #269c9c; 
+	height: 0%;
+	color:#ffffff;
+}
+
+tr{
+height:10vh;
+}
+
+table{
+   margin: 0 auto;
+   width: 65%;
+}
+
+caption {
+display: table-caption ;
+font-weight: normal;
+font-family: arial;
+font-size: 2em;
+color: #595959;
+text-align: center;
+}
+
+.first2{
+  background-color: #269c9c;
+  color:white;
+}
+
+.OffDay {
+  background-color: #cce8e8	; 
+}

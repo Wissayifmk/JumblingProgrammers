@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jumbling-Parent</title>
+        <link rel="styleSheet" href="primaryCode.css">
+		<link rel="styleSheet" href="Parent.css">
+
+    </head>
+   
+    <body>
+      
+      <header>
+
+            <div class="container">
+            
+            <nav>
+					<ul id="navigation">
+				  
+						<li>
+							<a href="Administrator.html" accesskey="a">Administrator dashboard
+							</a>
+						</li>
+						<li>
+							<a href="Parent.html" accesskey="p">Parent's dashboard</a>
+						</li>
+						<li>
+							<a href="courses.html" accesskey="c">Current courses
+							</a>
+						</li>
+						<li>
+							<a href="Tutors.html" accesskey="t">Tutors</a>
+						</li>
+						<li>
+							<a href="Home.html" accesskey="h">Home</a>
+						</li>
+						<li style="padding-right: 19%;"><img class="logo" src="images/logo.jpg" alt="logo of Jumbling website" width="130" height="100" ></li>
+					</li>
+				</ul>
+			</nav>
+
+      </div>
+
+        </header>
+       <main>
+	     <div class="admin">
+			<div class="title">
+				<h1 style="text-align: center; align-items: flex-start; color:#006C7F;">My Kids</h1>	
+		 </div>
+		 <div class="kids">
+			<ul id= "k">
+			
+		</ul>
+		</div>
+		<div class="pages" id="p">
+		<div>
+		<img src="images/mothers1.JPEG" alt="Register A New Kid">
+		<h3 style="text-align: center;"><a href="Register child.html">Register A New Kid</a></h3>
+		</div>
+		<div>
+		<img src="images/mothers2.JPEG" alt="Course Enrolment">
+		<h3 style="text-align: center;"><a href="Enrolment.html">Course Enrolment</a></h3>
+		</div>
+		<div>
+		<img src="images/mothers3.JPEG" alt="Course Evaluation">
+		<h3 style="text-align: center;"><a href="Evaluation.html">Course Evaluation</a></h3>
+		</div>
+		</div>
+		</div>
+        </main>
+        <footer>
+        
+            <h3 class="contactRec">Contact us</h3>
+            <ul class="contactRec">
+            <li class="contactRec">+966522981060 <hr></li>
+            <li class="contactRec">+0114820061<hr></li>
+            <li class="contactRec">Jumbling@academy.com<hr></li>
+        </ul>
+        <ul class="socialMedia">
+            <li class="socialMedia"><img class="socialMedia" src="images/facebook.png" alt="facebook icon" height="20" width="20"></li>
+            <li class="socialMedia"><img class="socialMedia" src="images/instagram.png" alt="instgram icon" height="20" width="20"></li>
+            <li class="socialMedia"><img class="socialMedia" src="images/x.png" alt="X icon" height="20" width="20"></li>
+        </ul>
+            <p class="rights"> ®2023 Jumbling academy.All rights</p>
+            
+            <h3 class="address">Address</h3>
+            <ul class="address">
+                <li class="address">Saudi Arabia, Riyadh<hr></li>
+                <li class="address">Saudi Arabia, Jeddah<hr></li>
+                <li class="address">Saudi Arabia, Dammam<hr></li>
+            </ul>
+       
+        </footer>
+		
+		<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('parentChildren') === null) {
+        var childrenData = [
+          {
+            name: 'Mohammed Alsuliman',
+            picture: 'images/kid5.png',
+          },
+          {
+            name: 'LULWAH ALSULIMAN',
+            picture: 'images/kid2.png',
+          }
+        ];
+        localStorage.setItem('parentChildren', JSON.stringify(childrenData));
+      }
+
+      var savedChildrenData = JSON.parse(localStorage.getItem('parentChildren'));
+      displayChildren(savedChildrenData);
+    });
+
+    function displayChildren(childrenData) {
+      // Check if childrenData is an array
+      if (!Array.isArray(childrenData)) {
+        console.error('Invalid data format. Expected an array.');
+        return;
+      }
+
+      var childrenList = document.getElementById('k');
+      childrenData.forEach(function(child) {
+        var listItem = document.createElement('li');
+        var childDiv = document.createElement('div');
+        var image = document.createElement('img');
+        image.src = child.picture;
+        image.alt = child.name;
+        var childName = document.createElement('h3');
+        childName.style.textAlign = 'center';
+        childName.textContent = child.name;
+
+        childDiv.appendChild(image);
+        childDiv.appendChild(childName);
+        listItem.appendChild(childDiv);
+        childrenList.appendChild(listItem);
+      });
+    }
+  </script>
+		<!--js file-->
+            <script src="script.js"></script>
+    </body>
+
+</html>

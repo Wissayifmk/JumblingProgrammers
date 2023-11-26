@@ -1,0 +1,211 @@
+/*form for regster and enrolment*/
+.backgroundimg {
+  background-image: url("images/Backgroundloud.png");
+  width:100%;
+  height:100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.backgroundimg2 {
+  background-image: url("images/BackgroundEnr.png");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  position: relative;
+}
+
+.select{
+display:none;
+}
+
+input[type="file"]::before {
+  content: "Add photo                                                                             ";
+  color:#a6a6a6;
+  padding: 10%;
+  color: #333;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #269c9c;
+  color: white;
+  margin: 2% 45% 2% 45%;
+  width:10%;
+  padding: 2vh 2vw;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn2 {
+  background-color: #269c9c;
+  color: white;
+  margin: 2% 45% 1% 40%;
+  width:10%;
+  padding: 2vh 2vw;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+.custom-fieldset {
+  position: relative;
+  top: 22.5%; 
+  left: 45%;
+}
+
+.customfieldset{
+  position: relative;
+  top: 95%; 
+  left: 47%;
+  height:140vh;
+}
+
+.alignment{
+  position: relative;
+  left: 38%;
+  width:30%; 
+  height:4vh;
+}
+
+.alignment2{
+  position: relative;
+  left: 30%;
+  height:4vh;
+}
+
+.BigDiv{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:100vw;
+  height:50vh;
+}
+
+.BigFilter{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.Filter{
+  display:flex;
+  justify-content:center;
+  width:30vw;
+}
+
+.PrerequeisitesFilter{
+  display:inline-block;
+  flex-direction:row;
+  align-content:flex-start;
+  align-items:baseline;
+  width:30%;
+}
+
+.tutorFilter{
+  display:inline-block;
+  flex-direction:row;
+  align-content:flex-end;
+  align-items:baseline;
+  width:30%;
+}
+
+.courseEnro{
+list-style-type:none;
+}
+
+.CourseSelect{
+  border: 0.1vh solid ;
+  width:40%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.SelectAll{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.SelectCourse{
+  border: 0.1vh solid ;
+  width:40%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
+  font-size: 0.5em;
+}
+
+/*design checkbox*/
+.checkboxCourse {
+  display: block;
+  position: relative;
+  padding-left: 3vw;
+  margin-bottom: 2vh;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxCourse input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4vh;
+  width: 2vw;
+  background-color: #cccccc;
+}
+
+.checkboxCourse:hover input ~ .checkmark {
+  background-color: #595959;
+}
+
+.checkboxCourse input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxCourse input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxCourse .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 0.2vw 0.4vh 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+tbody th{
+width: 5vw;
+}

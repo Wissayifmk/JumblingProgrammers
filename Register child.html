@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jumbling- Register a new child</title>
+        <link rel="styleSheet" href="primaryCode.css">
+        <link rel="styleSheet" href="Forms.css">
+        
+    </head>
+   
+    <body>
+      
+        <header>
+
+            <div class="container">
+            
+            <nav>
+                <ul id="navigation">
+            
+               
+               <li><a href="Administrator.html" accesskey="a">Administrator dashboard </a></li>
+               <li><a href="Parent.html" accesskey="p">Parent's dashboard</a></li>
+               <li><a href="courses.html" accesskey="c">Current courses </a></li>
+               <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+               <li><a href="Home.html" accesskey="h">Home</a></li>
+               <li style="padding-right: 19%;"><img class="logo" src="images/logo.jpg" alt="logo of Jumbling website" width="130" height="100">
+               </li>
+            </ul>
+            </nav>
+      </div>
+
+        </header>
+       
+	<main>
+	<div class="backgroundimg" style="width:100%;; height:120vh"><br><br><br>
+	<fieldset class ="custom-fieldset" style="width:50%;">
+    <legend>Register a new child</legend>
+    <form onsubmit="return submitForm()">
+    <br><br>
+      <input type="text" name="Fname" placeholder="  First name" class="alignment"> 
+      <input type="text" name="lname" placeholder="  Last name" class="alignment"> <br><br>
+      
+      <input type="date" name="Age" class="alignment" style="width:60%"><br><br>
+      
+      <select name ="Gender" class="alignment" style="width:60%"> 
+        <option class="select" >Select Gender</option>
+    	<option>Male</option>
+    	<option>Female</option>
+    </select><br><br>
+    
+        <input type="email" placeholder="  E-mail" class="alignment" style="width:60%"><br><br>
+    
+      <input type="tel" placeholder="  Phone Number" class="alignment" style="width:60%"><br><br>
+     
+     <input type="file" id="myfile" name="myfile" class="alignment" style="border: 0.3vh solid grey; width:60%; text-align:center"><br><br>
+        
+        <input type="submit" value="Submit" class="btn">
+        </form>
+    </fieldset>
+    </div>
+	</main>
+    <footer>
+        
+            <h3 class="contactRec">Contact us</h3>
+            <ul class="contactRec">
+            <li class="contactRec">+966522981060 <hr></li>
+            <li class="contactRec">+0114820061<hr></li>
+            <li class="contactRec">Jumbling@academy.com<hr></li>
+        </ul>
+        <ul class="socialMedia">
+            <li class="socialMedia"><img class="socialMedia" src="images/facebook.png" alt="facebook icon" height="20" width="20"></li>
+            <li class="socialMedia"><img class="socialMedia" src="images/instagram.png" alt="instgram icon" height="20" width="20"></li>
+            <li class="socialMedia"><img class="socialMedia" src="images/x.png" alt="X icon" height="20" width="20"></li>
+        </ul>
+            <p class="rights"> ®2023 Jumbling academy.All rights</p>
+            
+            <h3 class="address">Address</h3>
+            <ul class="address">
+                <li class="address">Saudi Arabia, Riyadh<hr></li>
+                <li class="address">Saudi Arabia, Jeddah<hr></li>
+                <li class="address">Saudi Arabia, Dammam<hr></li>
+            </ul>
+       
+        </footer>
+        <!--js file-->
+        <script src="script.js"></script>
+    	<script src="Script1.js"></script>
+    	
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jumbling-Home</title>
+  <link rel="styleSheet" href="home.css">
+  <script src="https://kit.fontawesome.com/8b4b39c33b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="Home.html" class="logo"><img src="images/logo.jpg" alt=""></a>
+      <span class="menu-btn ">
+        <div class='menu-icon'>
+          <span class="navicon"></span>
+        </div>
+      </span>
+    </div>
+    <ul class="menu">
+      <li><a href="Home.html" accesskey="h">Home</a></li>
+	  <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+	  <li><a href="courses.html" accesskey="c">Current courses </a></li>
+	  <li><a href="Parent.html" accesskey="p">Parent's dashboard</a></li>
+      <li><a href="Administrator.html" accesskey="a">Administrator dashboard </a></li>
+	  <li id="darkMode"><img id="darkmode-img" class="dark" src="images/moon.png" width="50vw" height="50vw"></li>
+    </ul>
+  </header>
+
+  <script>
+    document.querySelector('.menu-btn').addEventListener("click", () => {
+      document.querySelector('.menu-icon').classList.toggle("open")
+      document.querySelector('.menu').classList.toggle("open")
+    });
+  </script>
+  <main>
+    <div class="outer">
+      <div class="flex-container" id="vision">
+        <div class='vision-text'>
+          <h2>Vision</h2><br>
+          <p>To revolutionize education by providing an innovative online platform that empowers educators and learners
+            alike. We aim to create a dynamic and inclusive virtual learning environment where knowledge knows no
+            boundaries.</p>
+        </div>
+        <div class="vision-img">
+          <img src="images/vision.jpg" alt="vision">
+        </div>
+      </div>
+
+      <div>
+        <h1>Courses</h1>
+      </div>
+
+      <div class="flex-container" id="courses">
+        <div class="course-cont">
+          <img src="images/java.jpg" alt="java">
+          <h6>JAVA</h6>
+          <h6>An object-oriented programming language</h6><br>
+          <div class="star-cour"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> </div>
+        </div>
+
+        <div class="course-cont">
+          <img src="images/python.jpg" alt="python">
+          <h6>PYTHON</h6>
+          <h6>An object-oriented programming language</h6><br>
+          <div class="star-cour"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>
+
+        </div>
+
+        <div class="course-cont">
+          <img src="images/c.jpg" alt="c">
+          <h6>C++</h6>
+          <h6>An object-oriented programming language</h6><br>
+          <div class="star-cour"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>
+
+        </div>
+
+        <div class="course-cont">
+          <img src="images/r.jpg" alt="r">
+          <h6>R</h6>
+          <h6>A simple and effective programming language</h6><br>
+          <div class="star-cour2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>
+
+        </div>
+
+        <div class="course-cont">
+          <img src="images/html.jpg" alt="html">
+          <h6>HTML</h6>
+          <h6>markup language defines the meaning and structure of web content</h6><br>
+          <div class="star-cour2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+        </div>
+
+        <div class="course-cont">
+          <img src="images/css.jpg" alt="css">
+          <h6>CSS</h6>
+          <h6>A stylesheet language to describe the presentation of a document</h6><br>
+          <div class="star-cour2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+        </div>
+
+      </div>
+
+      <div>
+        <h1>Parents' Reviews</h1>
+      </div>
+
+      <div class="flex-container" id="parentsReview">
+        <div class="review-cont">
+          <img src="images/profile.png" alt="profile">
+          <h6>Maryam</h6>
+          <h6>Thank you Jumbling for being a part of my dauther's journey in learning programming.</h6><br>
+          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> </div>
+
+        </div>
+
+        <div class="review-cont">
+          <img src="images/profile.png" alt="profile">
+          <h6>Hayfa</h6>
+          <h6>I am happy that my dauther has begun to love programming and learn it,she loves your teachers and happy to
+            learn with them. </h6><br>
+          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+
+        </div>
+
+        <div class="review-cont">
+          <img src="images/profile.png" alt="profile">
+          <h6>Norah</h6>
+          <h6>Great and effective application!</h6><br>
+          <div class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="main-footer">
+      <div class="logoinfo" data-aos="fade-up">
+
+        <div class="contact-details">
+          <h1>Contact Us</h1>
+          <li>
+            <a href="tel:+91">+966522981060 </a>
+          </li>
+          <li>
+            <a href="tel:+91">+966522981060 </a>
+
+          </li>
+          <li>
+            <a href="mailto:yourmail@gmail.com">JUMBLING@ACADEMY.COM</a>
+          </li>
+        </div>
+      </div>
+
+      <div class="info" data-aos="fade-up">
+        <h1>Address</h1>
+        <div class="sociallogos">
+          <div class="logobox">
+            <a href="">
+              <span> SAUDI ARABIA, RIYADH</span><br>
+              <span> SAUDI ARABIA, JEDDAH</span><br>
+              <span> SAUDI ARABIA, DAMMAM </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="last">
+      <img class="socialMedia" src="images/facebook.png" alt="facebook icon" height="20" width="20">
+      <img class="socialMedia" src="images/instagram.png" alt="instgram icon" height="20" width="20">
+      <img class="socialMedia" src="images/x.png" alt="X icon" height="20" width="20">
+    </div>
+    <div class="last-copy">®2023 Jumbling academy.All rights
+    </div>
+  </footer>
+
+  <!--js file-->
+  <script src="script.js"></script>
+</body>
+
+</html>

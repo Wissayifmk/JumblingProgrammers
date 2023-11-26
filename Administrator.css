@@ -1,0 +1,181 @@
+div.admin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 500%;
+	margin-top: 10vh;
+
+}
+h1{
+	position: absolute;
+	text-align: center; 
+	align-items: flex-start;
+	 color:#006C7F;
+	  height: 10vh;
+	 font-size: 7vh;
+	 bottom: 70vh;
+	 margin-bottom: -6vh;
+	 left: 80vh;
+
+
+	 
+
+}
+div.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+}
+
+div.lists {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 95%;
+	height: 500%;
+	padding: 10px;
+}
+
+div.students {
+	width: 50%;
+	height: 500%;
+	padding: 50px;
+}
+
+div.courses {
+	width: 50%;
+	padding: 50px;
+	height: 500%;
+}
+
+div.tutors {
+	width: 50%;
+	padding: 50px;
+	height: 500%;
+}
+
+#s, #t, #c {
+	border-style: solid;
+	border-color: #04364A;
+	background-clip: border-box;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 15px;
+	border-width: 0.25vw;
+	height: 50%;
+	justify-content: space-around;
+	background-color: #006C7F;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	color: white;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#sul li, #tul li, #cul li {
+	border-style: solid;
+	border-color: #04364A;
+	background-clip: border-box;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 15px;
+	border-width: 0.25vw;
+	height: 500%;
+	justify-content: space-around;
+	background-color: #dfe4e6;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+
+#sul, #tul, #cul {
+	border-style: solid;
+	border-color: #04364A;
+	background-clip: content-box;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 15px;
+	border-width: 0.25vw;
+	height: 500%;
+	justify-content: space-around;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#tul1, #tul2, #tul3, #tul4, #tul5 {
+	text-align: center;
+
+}
+
+#tul li a {
+	border-style: solid;
+	border-color: #04364A;
+	background-clip: border-box;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 15px;
+	border-width: 0.25vw;
+	height: 1000%;
+	justify-content: space-around;
+	background-color: #dfe4e6;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	color: black;
+}
+
+#tul li a:hover {
+	background-color: #bec3c4;
+}
+
+.five {
+	height: 1000%;
+}
+
+#more1:hover {
+	background-color: #bec3c4;
+}
+
+#more2:hover {
+	background-color: #bec3c4;
+}
+
+#more3:hover {
+	background-color: #bec3c4;
+
+}
+
+.moreStudents {
+	display: none;
+}
+
+#firstDay {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	bottom: 61vh;
+	left: 85vh;
+
+
+}
+
+
+
+.more {
+	cursor: pointer;
+	border-style: solid;
+	display: flex;
+	border-radius: 15px;
+	border-width: 0.25vw;
+	justify-content: center;
+	padding: 15px;
+	color: #282020;
+}
+

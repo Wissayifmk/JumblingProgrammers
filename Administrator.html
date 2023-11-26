@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jumbling-Administrator</title>
+		<link rel="styleSheet" href="primaryCode.css">
+		<link rel="styleSheet" href="Administrator.css">
+	</head>
+
+	<body>
+
+		<header>
+			<div class="container">
+				<nav>
+					<ul id="navigation">
+					
+						<li>
+							<a href="Administrator.html" accesskey="a">Administrator dashboard
+							</a>
+						</li>
+						<li>
+							<a href="Parent.html" accesskey="p">Parent's dashboard</a>
+						</li>
+						<li>
+							<a href="courses.html" accesskey="c">Current courses
+							</a>
+						</li>
+						<li>
+							<a href="Tutors.html" accesskey="t">Tutors</a>
+						</li>
+						<li>
+							<a href="Home.html" accesskey="h">Home</a>
+						</li>
+						<li style="padding-right: 19%;"><img class="logo" src="images/logo.jpg" alt="logo of Jumbling website" width="130" height="100">
+						</li>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>
+</header>
+
+<main>
+<div class="admin">
+	
+
+		<h1>Administrator</h1>
+</div>
+
+		
+
+
+
+<div class="title">
+<div class="box">
+<div id="firstDay"> </div>
+
+</div>
+
+<script>
+
+ function getFirstDayOfWeek() { 
+ var date = new Date();
+ var dayOfWeek = date.getDay();
+var firstDay = new Date(date.getFullYear(), date.getMonth(), date.getDate() - dayOfWeek);
+
+ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+ var formattedFirstDay = firstDay.toLocaleDateString('en-US', options);
+
+ document.getElementById("firstDay").innerHTML = formattedFirstDay;
+ }
+getFirstDayOfWeek();
+</script>
+		</div> 
+
+
+	<div class="lists">
+		<div class="courses">
+			<h2 id="c" style="text-align: center;">Courses</h2>
+			<ul id="cul" style="list-style-type: disc; border-style: none ;">
+				<li>Java<br>T.Noha ahmad<br><br>students:
+					<ul>
+						<li>Ahad AlTaweel</li>
+						<li>Haya Alsulaiman</li>
+					</ul>
+				</li>
+				<li>python<br>T.sara ali<br><br>students:
+					<ul>
+						<li>Najla Alsuliman</li>
+						<li>Abdulaziz Alsuliman</li>
+					</ul>
+				</li>
+				<li>c++<br>T.Haya ahmad<br><br>students:
+					<ul>
+						<li>Faisal Alaftan</li>
+						<li>Aljwharah Yousef</li>
+					</ul>
+				</li>
+				<li>r<br>T.hind nasser<br><br>students:
+					<ul class="six">
+						<li>Mohammed Alsuliman</li>
+						<li>Lulwah Alsuliman</li>
+						<li>Abdulaziz Alsuliman</li>
+						<li>Saif Alsaif</li>
+						<li>Shoug Alsaif</li>
+						<span class="moreStudents">
+							<li>Fahda Alsaif</li>
+						</span>
+						<div class="more">
+							More students</div>
+					</ul>
+				</li>
+				<li>html<br>T.Noha ahmad<br><br>students:
+					<ul class="six">
+						<li>Nojud Alsuliman</li>
+						<li>Maha Alsuliman</li>
+						<li>Ahad AlTaweel</li>
+						<li>Najla Alsuliman</li>
+						<li>Haya Alsulaiman</li>
+						<span class="moreStudents">
+							<li>Saif Alsaif</li>
+						</span>
+						<div class="more">
+							More students</div>
+						<!--we will add more students if the "More"-->
+					</ul>
+				</li>
+				<li>css<br>T.hessah yousef<br><br>students:
+					<ul class="six">
+						<li>Mohammed Alsuliman</li>
+						<li>Aljwharah Yousef</li>
+						<li>Maha Alsuliman</li>
+						<li>Lulwah Alsuliman</li>
+						<li>Faisal Alaftan</li>
+						<span class="moreStudents">
+							<li>Shoug Alsaif</li>
+						</span>
+						<div class="more">
+							More students
+						</div>
+						<!--we will add more students if the "More"-->
+					</ul>
+
+				</li>
+			</ul>
+		</div>
+        
+		<!--more button-->
+		<script>
+			let more = document.querySelectorAll('.more');
+more.forEach(function (moreItem) {
+    let moreStudents = moreItem.previousElementSibling;
+    let students = moreStudents.querySelectorAll('li');
+    let count = 0;
+
+    
+    students.forEach(function (student) {
+        count++;
+    });
+    
+    if (count > 3) {
+        moreItem.style.display = 'block';
+        moreStudents.style.display = 'none';
+    }
+   
+    moreItem.addEventListener('click', function () {
+        moreStudents.style.display = 'block';
+        moreItem.style.display = 'none';
+    });
+});
+		</script>
+
+
+
+
+
+
+
+
+		<div class="students">
+			<h2 id="s" style="text-align: center;">Students</h2>
+			<ul id="sul" style="list-style-type: disc; border-style: none ;">
+				<li>Ahad AlTaweel</li>
+				<li>Haya Alsulaiman</li>
+				<li>Faisal Alaftan</li>
+				<li>Aljwharah Yousef</li>
+				<li>Nojud Alsuliman</li>
+				<li>Maha Alsuliman</li>
+				<li>Lulwah Alsuliman</li>
+				<li>Mohammed Alsuliman</li>
+				<li>Abdulaziz Alsuliman</li>
+				<li>Najla Alsuliman</li>
+				<li>Saif Alsaif</li>
+				<li>Shoug Alsaif</li>
+			</ul>
+		</div>
+		<div class="tutors">
+			<h2 id="t" style="text-align: center;">Tutors</h2>
+			<ul id="tul" style="list-style-type: disc; border-style: none ;">
+				<li>
+					<a href="T.Noha schedule.html">T.Noha ahmad<br><br>courses:</a>
+					<ul id="tul1">
+						<li>java</li>
+						<li>html</li>
+					</ul>
+				</li>
+				<li>
+					<a href="T.Sara's schedule.html">T.Sara ali<br><br>courses:</a>
+					<ul id="tul2">
+						<li>python</li>
+					</ul>
+				</li>
+				<li>
+					<a href="T.Noha schedule.html">t.Haya ahmad<br><br>courses:</a>
+					<ul id="tul3">
+						<li>c++</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="T.Sara's schedule.html">Hend nasser<br><br>courses:</a>
+					<ul id="tul4">
+						<li>R</li>
+					</ul>
+				</li>
+				<li>
+					<a href="T.Noha schedule.html">T.Hessah yousef<br><br>courses:</a>
+					<ul id="tul5">
+						<li>css</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</main>
+<footer>
+
+<h3 class="contactRec">Contact us</h3>
+<ul class="contactRec">
+	<li class="contactRec">+966522981060
+		<hr></li>
+	<li class="contactRec">+0114820061<hr></li>
+	<li class="contactRec">Jumbling@academy.com<hr></li>
+</ul>
+<ul class="socialMedia">
+	<li class="socialMedia"><img class="socialMedia" src="images/facebook.png" alt="facebook icon" height="20" width="20"></li>
+	<li class="socialMedia"><img class="socialMedia" src="images/instagram.png" alt="instgram icon" height="20" width="20"></li>
+	<li class="socialMedia"><img class="socialMedia" src="images/x.png" alt="X icon" height="20" width="20"></li>
+</ul>
+<p class="rights">
+	®2023 Jumbling academy.All rights</p>
+
+<h3 class="address">Address</h3>
+<ul class="address">
+	<li class="address">Saudi Arabia, Riyadh<hr></li>
+	<li class="address">Saudi Arabia, Jeddah<hr></li>
+	<li class="address">Saudi Arabia, Dammam<hr></li>
+</ul>
+</footer>
+
+<script src="script.js">
+</script>
+</body>
+</html>

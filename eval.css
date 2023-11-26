@@ -1,0 +1,145 @@
+main {
+    margin: 7%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    box-sizing: border-box;
+
+
+
+}
+
+.courseBox {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 6vh;
+
+}
+
+
+
+.review {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 6vh;
+
+
+
+}
+
+.review::before {
+    content: "Review";
+    position: relative;
+    left: 28vh;
+    bottom: 4vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buttonstyle {
+    background-color: #006C7F;
+    color: aliceblue;
+    padding: 2%;
+    margin-top: 5vh;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 20vh;
+    height: 10vh;
+    text-align: center;
+    box-shadow:0em 0em 0.3em 0.3em lightblue;
+
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+input[type="file"]::before {
+    position: relative;
+    content: "Add photo";
+    color: aliceblue;
+    background-color: #006C7F;
+    padding: 10% 20%;
+    left: 14vh;
+
+
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.photoButton{
+    display: inline;
+    color: #f9f9f9;
+    background-color:#006C7F ;
+    padding: 2vh;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow:0em 0em 0.3em 0.3em lightblue;
+}
+
+.photoButton:hover{
+    opacity: 0.8;
+}
+
+
+
+.stars {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stars .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 4vh;
+    color: #444;
+    padding: 5vh;
+
+}
+
+.star-widget label {
+    color: #424141;
+    padding: 4vh;
+    float: right;
+}
+
+#forma {
+    box-shadow:0.3em 0.3em 0.3em 1em lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 20px;
+   background: #f9f9f9;
+    border-radius: 10px;
+}
+
+#forma>div {
+    gap: 10px;
+    padding: 2px;
+    margin: 20px auto;
+    background: #f9f9f9;
+}
+
+.review textarea {
+    margin: 10px;
+}
+
+.star-widget input:checked~label {
+    color: #ffca08 !important;
+}
+
+
+#forma select {
+    padding: 8px;
+}

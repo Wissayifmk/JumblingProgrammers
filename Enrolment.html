@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jumbling- Course Enrolment</title>
+        <link rel="styleSheet" href="primaryCode.css">
+        <link rel="styleSheet" href="Forms.css">
+
+    </head>
+   
+    <body>
+      
+        <header>
+
+            <div class="container">
+            
+                <nav>
+            
+                        <ul id="navigation">
+            
+                           
+                           <li><a href="Administrator.html" accesskey="a">Administrator dashboard </a></li>
+                           <li><a href="Parent.html" accesskey="p">Parent's dashboard</a></li>
+                           <li><a href="courses.html" accesskey="c">Current courses </a></li>
+                           <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+                           <li><a href="Home.html" accesskey="h">Home</a></li>
+                           <li style="padding-right: 19%;"><img class="logo" src="images/logo.jpg" alt="logo of Jumbling website" width="130" height="100">
+                           </li> 
+                    </ul>
+			</nav>
+      </div>
+
+        </header>
+<!--style="width:80vw; height:160vh"-->
+       <main>
+       <div class="backgroundimg2" style="width:100%;
+       height:153vh" > 
+       <div class="BigDiv">
+        <div id="FormData" style="
+        
+        width: 50vh;
+        margin-top: 5vh;
+        position: absolute;
+        left: 50px;
+    ">
+
+        </div>
+		<fieldset class ="customfieldset" style="width:50%;">
+    	<legend>Course Enrolment</legend>
+    	<form onsubmit="event.preventDefault(); validateMyForm();">
+    	<br><br>
+
+    	<div class="BigFilter">
+    	<label class="FilterHeader">Filter</label>
+    	<div class="Filter">
+        <select name="Filter1" size="6" multiple class="PrerequeisitesFilter">
+    	<optgroup label="Prerequeisites" id="Prerequeisites">
+      		
+    	</optgroup>
+  		</select> 
+  		<select name="Filter2" size="6" multiple class="tutorFilter">
+    	<optgroup label="Current tutor" id="teachersNames">
+      		
+    	</optgroup>
+  		</select> 
+  		</div>
+  		</div>
+  		<br>
+      	<select name ="Kidsname" class="alignment2" style=" width:40%; " id="Kidsname"> 
+        	<option class="select" value="Select a kid">Select a kid</option>
+    		
+    	</select><br><br>
+        
+        <div class="SelectAll" >
+        <div class="SelectCourse">
+        	<h1>Select course</h1>
+        	</div>
+        <div class="CourseSelect">
+        <table>
+        <tbody id="courses">
+     
+          </tbody>
+          </table>
+        </div>
+        
+        
+            </div>
+        <input type="submit" value="Submit" class="btn btn2" >
+    </form>    
+    </fieldset>
+	</div>
+    </div>
+       </main>
+        <footer>
+        
+            <h3 class="contactRec">Contact us</h3>
+            <ul class="contactRec">
+            <li class="contactRec">+966522981060 <hr></li>
+            <li class="contactRec">+0114820061<hr></li>
+            <li class="contactRec">Jumbling@academy.com<hr></li>
+        </ul>
+        <ul class="socialMedia">
+            <li class="socialMedia"><img class="socialMedia" src="images/facebook.png" alt="facebook icon" height="20" width="20"></li>
+            <li class="socialMedia"><img class="socialMedia" src="images/instagram.png" alt="instgram icon" height="20" width="20"></li>
+            <li class="socialMedia"><img class="socialMedia" src="images/x.png" alt="X icon" height="20" width="20"></li>
+        </ul>
+            <p class="rights"> ®2023 Jumbling academy.All rights</p>
+            
+            <h3 class="address">Address</h3>
+            <ul class="address">
+                <li class="address">Saudi Arabia, Riyadh<hr></li>
+                <li class="address">Saudi Arabia, Jeddah<hr></li>
+                <li class="address">Saudi Arabia, Dammam<hr></li>
+            </ul>
+       
+        </footer>
+        
+        <script src="script.js"></script>
+        <script>
+            
+
+var childrensData = JSON.parse(localStorage.getItem('parentChildren'));
+
+if(childrensData){
+    for(var i = 0 ; i < childrensData.length ; i++){
+        document.getElementById('Kidsname').innerHTML += `<option value="${childrensData[i].name}">${childrensData[i].name}</option>`;
+    
+    }
+}
+
+let courses = [
+    ['Java', 'Noha Ahmed','Python','images/Java.png'],
+    ['Python', 'Sara Ali','','images/Python.png'],
+    ['CSS', 'Hessah Yousef','HTML','images/CSS.png'],
+    ['HTML', 'Noha Ahmed','','images/HTML.png'],
+    ['C', 'Sara Ali','R','images/C.png'],
+    ['R', 'Hind Nasser','','images/R.png'],
+    ['C#', 'Hessah Yousef','C++','images/CC.png'],
+    ['C++', 'Haya Ahmed','Java','images/C++.png'],
+    ['Javascript', 'Hind Nasser','CSS','images/JS.png']
+];
+var addedTechNames = [];
+var addedPre = [];
+
+for(var i = 0 ; i < courses.length ; i++){
+    if(!addedTechNames.includes(courses[i][1])){
+        addedTechNames.push(courses[i][1]);
+        document.getElementById('teachersNames').innerHTML += `<option value="${courses[i][1]}" onclick="filterByTechName('${courses[i][1]}')">${courses[i][1]}</option>`;
+    }
+    if(courses[i][2] != '' && !addedPre.includes(courses[i][2])){
+        addedPre.push(courses[i][2]);
+        document.getElementById('Prerequeisites').innerHTML += `<option value="${courses[i][2]}" onclick="filterByPre('${courses[i][2]}')">${courses[i][2]}</option>`;
+
+    }
+    
+
+    document.getElementById('courses').innerHTML += `<tr>
+    <th><img src="${courses[i][3]}" alt="" width="50" height="50"></th>
+    <td><label class="checkboxCourse">${courses[i][0]}
+              <input type="checkbox" name="checkboxCourse" value="${courses[i][0]}">
+              <span class="checkmark"></span>
+            </label></td>
+      </tr>`;
+
+}
+
+function filterByTechName(name){
+    document.getElementById('courses').innerHTML="";
+
+    for(var i = 0 ; i < courses.length ; i++){
+
+        if(courses[i][1] == name){
+            document.getElementById('courses').innerHTML += `<tr>
+            <th><img src="${courses[i][3]}" alt="" width="50" height="50"></th>
+            <td><label class="checkboxCourse">${courses[i][0]}
+                      <input type="checkbox" name="checkboxCourse" value="${courses[i][0]}">
+                      <span class="checkmark"></span>
+                    </label></td>
+              </tr>`;
+
+        }
+        
+    
+      
+    
+    }
+
+}
+
+function filterByPre(name){
+    document.getElementById('courses').innerHTML="";
+
+    for(var i = 0 ; i < courses.length ; i++){
+
+        if(courses[i][2] == name){
+            document.getElementById('courses').innerHTML += `<tr>
+            <th><img src="${courses[i][3]}" alt="" width="50" height="50"></th>
+            <td><label class="checkboxCourse">${courses[i][0]}
+                      <input type="checkbox" name="checkboxCourse" value="${courses[i][0]}" >
+                      <span class="checkmark"></span>
+                    </label></td>
+              </tr>`;
+
+        }
+        
+    
+      
+    
+    }
+
+}
+
+function validateMyForm()
+{
+
+    var flag = false;
+    var names =[];
+
+    for( var i = 0 ; i < document.getElementsByName('checkboxCourse').length ; i++){
+        if(document.getElementsByName('checkboxCourse')[i].checked){
+            flag=true;
+            for(var n = 0 ; n < courses.length ; n++){
+                if(courses[n][0] == document.getElementsByName('checkboxCourse')[i].value){
+                    names.push([document.getElementsByName('checkboxCourse')[i].value,courses[n][1]]);
+
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+    if(document.getElementById('Kidsname').value !='Select a kid' ){
+        if(!flag){
+            alert("There is no course selected");
+            return false;
+        }
+        else{
+            for(var i = 0 ; i < names.length ; i++){
+
+                if(i==0){
+                    document.getElementById('FormData').innerHTML=`<h3>${document.getElementById('Kidsname').value}</h3><div>
+                    Course name: ${names[i][0]}  / Tutor:  ${names[i][1]}</div>`;
+
+                }
+                
+                else{
+                    document.getElementById('FormData').innerHTML +=`<div>Course name: ${names[i][0]}  / Tutor:  ${names[i][1]}</div>`;
+
+                }
+            
+               
+               
+
+
+            }
+
+           //document.getElementById('FormData').innerHTML=`</table>`;
+            document.getElementById('Kidsname').value = 'Select a kid';
+            for( var j = 0 ; j < document.getElementsByName('checkboxCourse').length ; j++){
+                document.getElementsByName('checkboxCourse')[j].checked = false;
+        
+        
+            }
+
+            return true;
+        }
+
+    }
+    else{
+
+        alert("There is no child selected");
+        if(!flag){
+            alert("There is no course selected");
+            return false;
+        }
+        return false;
+    }
+ 
+
+  
+}
+        </script>
+        
+
+    </body>
+</html>
